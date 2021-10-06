@@ -13,6 +13,8 @@
  $first_name = $POST['first_name'];
  $last_name = $POST['last_name'];
  $email = $POST['email'];
+ $description = $POST['description'];
+ $amount = $POST['amount'] ."00";
  $token = $POST['stripeToken'];
 
 // Create Customer In Stripe
@@ -23,9 +25,9 @@ $customer = \Stripe\Customer::create(array(
 
 // Charge Customer
 $charge = \Stripe\Charge::create(array(
-  "amount" => 5000,
-  "currency" => "usd",
-  "description" => "Intro To React Course",
+  "amount" => $amount,
+  "currency" => "SAR",
+  "description" => $description,
   "customer" => $customer->id
 ));
 

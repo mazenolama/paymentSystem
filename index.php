@@ -11,12 +11,14 @@
 </head>
 <body>
   <div class="container">
-    <h2 class="my-4 text-center">Intro To React Course [$50]</h2>
+    <h2 class="my-4 text-center">Pay For your Product</h2>
     <form action="./charge.php" method="post" id="payment-form">
       <div class="form-row">
        <input type="text" name="first_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="First Name">
        <input type="text" name="last_name" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Last Name">
        <input type="email" name="email" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Email Address">
+       <input type="text" name="description" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="Product Description">
+       <input type="number" name="amount" class="form-control mb-3 StripeElement StripeElement--empty" placeholder="amount Address">
         <div id="card-element" class="form-control">
           <!-- a Stripe Element will be inserted here. -->
         </div>
